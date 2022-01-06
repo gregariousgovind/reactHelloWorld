@@ -7,4 +7,4 @@ const Hello = (props) => {
   );
 };
 
-export default Hello;
+export default React.memo(Hello);
