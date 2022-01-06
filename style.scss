@@ -1,0 +1,37 @@
+:root {
+  --shadow: -4px -4px 16px 4px #0c0b0b, 6px 6px 18px 8px #302b29;
+  --inner-shadow: inset -4px -4px 16px 4px #0c0b0b, 6px 6px 18px 8px #302b29;
+}
+
+body {
+  margin: 0;
+  background: #1d1a19;
+}
+
+.container {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  min-width: 250px;
+  width: fit-content;
+  max-width: 80%;
+  transform: translate(-50%, -50%);
+  color: #c2c2c2;
+  text-align: center;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: var(--inner-shadow), var(--shadow);
+}
+
+.container h1 {
+  margin-top: 0;
+}
+
+.container button {
+  padding: 8px 16px;
+  border: 2px solid #1d1a19;
+  border-radius: 4px;
+  color: #c2c2c2;
+  background: #282322;
+  box-shadow: var(--shadow);
+}

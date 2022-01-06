@@ -1,29 +1,23 @@
-import React, { Component } from 'react';
+import React, { useState } from 'react';
 import { render } from 'react-dom';
 import Hello from './Hello';
-import './style.css';
+import './style.scss';
 
-interface AppProps {}
-interface AppState {
-  name: string;
-}
+const App = () => {
+  const [showPara, setShowPara] = useState(false);
 
-class App extends Component<AppProps, AppState> {
-  constructor(props) {
-    super(props);
-    this.state = {
-      name: 'React',
-    };
-  }
+  console.log('App Running....');
 
-  render() {
-    return (
-      <div>
-        <Hello name={this.state.name} />
-        <p>This is my first react project on stackblitz :)</p>
-      </div>
-    );
-  }
-}
+  const toggleHandler = () => {
+    setShowPara((prevState) => !prevState);
+  };
+  return (
+    <div className="container">
+      <h1>Hi there!</h1>
+      <Hello show={false} />
+      <button onClick={toggleHandler}>Toggle Message!</button>
+    </div>
+  );
+};
 
 render(<App />, document.getElementById('root'));

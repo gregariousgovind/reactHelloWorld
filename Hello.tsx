@@ -1,3 +1,10 @@
 import React from 'react';
 
-export default ({ name }) => <h1>Hello {name}!</h1>;
+const Hello = (props) => {
+  console.log('Hello.....');
+  return (
+    <p>{props.show ? 'This is my first react project on stackblitz :)' : ''}</p>
+  );
+};
+
+export default Hello;
