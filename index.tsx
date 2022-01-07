@@ -14,7 +14,8 @@ const App = () => {
   return (
     <div className="container">
       <h1>Hi there!</h1>
-      <Hello show={showPara} />
+      <Hello show={false} />
+      {/* <Hello show={showPara} /> */}
       <button onClick={toggleHandler}>Toggle Message!</button>
     </div>
   );
